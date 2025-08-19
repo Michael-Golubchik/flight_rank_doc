@@ -4,6 +4,7 @@
     "TEST_DATA_PATH": "./data/test.parquet",
     "STATS_DIR": "./data/stats/",
     "CAT_MAP_PATH": "./data/stats/cat_mapping.pkl",
+    "PROCESSED_DATA_DIR": "./data/processed/",
     "TRAIN_DATA_PROCESSED_PATH": "./data/processed/train.parquet",
     "VALID_DATA_PROCESSED_PATH": "./data/processed/valid.parquet",
     "MODEL_CHECKPOINT_DIR": "./models/",

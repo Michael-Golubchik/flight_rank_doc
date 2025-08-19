@@ -4,12 +4,11 @@ import numpy as np
 
 class Cfg:
     # Флаги валидации и загрузки
-    IS_VALIDATE = True # Делать ли валидацию
+    IS_VALIDATE = False # Делать ли валидацию
     val_start_id = 14501077 # Индекс старта валидации в данных
     
     # Параметры модели
-    #num_boost_round = 1200
-    num_boost_round = 100
+    num_boost_round = 1200
     RANDOM_STATE = 42
 
     
@@ -28,6 +27,7 @@ class Cfg:
         Cfg.test_path = Path(settings["TEST_DATA_PATH"])
         Cfg.stats_dir = Path(settings["STATS_DIR"])
         Cfg.cat_map_path = Path(settings["CAT_MAP_PATH"])
+        Cfg.processed_data_dir = Path(settings["PROCESSED_DATA_DIR"])
         Cfg.train_path_processed = Path(settings["TRAIN_DATA_PROCESSED_PATH"])
         Cfg.valid_path_processed = Path(settings["VALID_DATA_PROCESSED_PATH"])
         
@@ -44,6 +44,7 @@ Cfg.load_settings()
 # убедимся, что папка существует
 Path(Cfg.raw_data_dir).mkdir(parents=True, exist_ok=True)
 Path(Cfg.stats_dir).mkdir(parents=True, exist_ok=True)
+Path(Cfg.processed_data_dir).mkdir(parents=True, exist_ok=True)
 Path(Cfg.models_dir).mkdir(parents=True, exist_ok=True)
 Path(Cfg.logs_dir).mkdir(parents=True, exist_ok=True)
 Path(Cfg.submissions_dir).mkdir(parents=True, exist_ok=True)

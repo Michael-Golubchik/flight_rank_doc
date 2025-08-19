@@ -12,6 +12,7 @@ import numpy as np
 import random
 from copy import deepcopy
 import pickle
+from datetime import datetime
 
 from common import Cfg
 from prepare_data import get_dmatrix
@@ -182,16 +183,16 @@ class XGB_Ensemble:
         params_list = [
             {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round},  # Базовая модель
             {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round+50, 'objective': 'rank:ndcg', 'seed': Cfg.RANDOM_STATE+1},
-            # {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+100, 'seed': Cfg.RANDOM_STATE+2},  # Базовая модель
-            # {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round-50, 'seed': Cfg.RANDOM_STATE+3},
-            # {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+500, 'seed': Cfg.RANDOM_STATE+4},
+            {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+100, 'seed': Cfg.RANDOM_STATE+2},  # Базовая модель
+            {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round-50, 'seed': Cfg.RANDOM_STATE+3},
+            {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+500, 'seed': Cfg.RANDOM_STATE+4},
 
             
-            # {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round, 'seed': Cfg.RANDOM_STATE+5},  # Базовая модель
-            # {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round+50, 'objective': 'rank:ndcg', 'seed': Cfg.RANDOM_STATE+6},
-            # {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+100, 'seed': Cfg.RANDOM_STATE+7},  # Базовая модель
-            # {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round-50, 'seed': Cfg.RANDOM_STATE+8},
-            # {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+500, 'seed': Cfg.RANDOM_STATE+9},
+            {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round, 'seed': Cfg.RANDOM_STATE+5},  # Базовая модель
+            {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round+50, 'objective': 'rank:ndcg', 'seed': Cfg.RANDOM_STATE+6},
+            {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+100, 'seed': Cfg.RANDOM_STATE+7},  # Базовая модель
+            {**deepcopy(base_params_1), 'num_boost_round': Cfg.num_boost_round-50, 'seed': Cfg.RANDOM_STATE+8},
+            {**deepcopy(base_params_2), 'num_boost_round': Cfg.num_boost_round+500, 'seed': Cfg.RANDOM_STATE+9},
         ]
 
         # Список для хранения обученных моделей
@@ -222,7 +223,7 @@ class XGB_Ensemble:
             # Извлекаем num_boost_round, так как он не является параметром XGBoost, а передается отдельно
             num_boost_round = params.pop('num_boost_round')
             
-            print('Start train model')
+            print('Start train model', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
             # Обучаем модель
             model = xgb.train(
                 params,
