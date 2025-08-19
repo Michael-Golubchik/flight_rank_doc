@@ -8,11 +8,13 @@
 
 2. `python train.py`
   - Read training data from PROCESSED_DATA_DIR (specified in SETTINGS.json)
+  - Read the statistics from STATS_DIR (specified in SETTINGS.json)
   - Train model.
   - Save model to MODEL_DIR (specified in SETTINGS.json)
-  
+
 3. `python predict.py`
   - Read test data from RAW_DATA_DIR (specified in SETTINGS.json)
+  - Read the statistics from STATS_DIR (specified in SETTINGS.json)
   - Load your model from MODEL_DIR (specified in SETTINGS.json)
   - Use model to make predictions on new samples
   - Save predictions to SUBMISSION_DIR (specified in SETTINGS.json)
