@@ -1,0 +1,14 @@
+ {
+    "RAW_DATA_DIR": "./data/",
+    "TRAIN_DATA_PATH": "./data/train.parquet",
+    "TEST_DATA_PATH": "./data/test.parquet",
+    "STATS_DIR": "./data/stats/",
+    "CAT_MAP_PATH": "./data/stats/cat_mapping.pkl",
+    "TRAIN_DATA_PROCESSED_PATH": "./data/processed/train.parquet",
+    "VALID_DATA_PROCESSED_PATH": "./data/processed/valid.parquet",
+    "MODEL_CHECKPOINT_DIR": "./models/",
+    "MODEL_CHECKPOINT_PATH": "./models/models_xgb.pkl",
+    "LOGS_DIR": "./logs/",
+    "SUBMISSION_DIR": "./submissions/",
+    "SUBMISSION_PATH": "./submissions/submission.csv"
+}
