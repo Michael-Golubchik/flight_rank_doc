@@ -42,4 +42,8 @@ class Cfg:
 Cfg.load_settings()
 
 # убедимся, что папка существует
+Path(Cfg.raw_data_dir).mkdir(parents=True, exist_ok=True)
 Path(Cfg.stats_dir).mkdir(parents=True, exist_ok=True)
+Path(Cfg.models_dir).mkdir(parents=True, exist_ok=True)
+Path(Cfg.logs_dir).mkdir(parents=True, exist_ok=True)
+Path(Cfg.submissions_dir).mkdir(parents=True, exist_ok=True)
