@@ -10,4 +10,3 @@ from model import XGB_Ensemble
 
 model = XGB_Ensemble()
 model.train()
-
