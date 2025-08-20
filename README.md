@@ -5,14 +5,17 @@ Below you can find a outline of how to reproduce my solution for the **FlightRan
 If you run into any trouble with the setup/code or have any questions please contact me at mikhail.golubchik@gmail.com<br>
 
 # ARCHIVE CONTENTS
-- data                     : contains data to train and test model
-- models                   : contains trained models
-- submissions              : contains predictopn on test
-- common.py                : code of config class
-- prepare_data.py          : code of prepairing data
-- model.py                 : code of the model class
-- train.py                 : code for training models
-- predict.py               : code for predicion on test
+- data                       : contains data to train and test model
+- models                     : contains trained models
+- submissions                : contains predictopn on test
+- common.py                  : code of config class
+- prepare_data.py            : code of prepairing data
+- model.py                   : code of the model class
+- train.py                   : code for training models
+- predict.py                 : code for predicion on test
+- xgboost-ranker.ipynb       : notebook with all code including optuna paramters search
+- feature_importance.ipynb   : notebook with the features importance
+- description.pdf            : competion description
 
 # HARDWARE:
 (The following specs were used to create the original solution)<br>
