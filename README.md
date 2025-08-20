@@ -14,18 +14,18 @@ If you run into any trouble with the setup/code or have any questions please con
 - predict.py               : code for predicion on test
 
 # HARDWARE:
-(The following specs were used to create the original solution)
-Ubuntu 24.04.2 LTS (2 TB boot disk)
-AMD EPYC 7452 32-Core Processor ( 64 vCPUs, 128 GB memory)
-4 x NVIDIA RTX A5000 (not used in this compettion)
+(The following specs were used to create the original solution)  
+Ubuntu 24.04.2 LTS (2 TB boot disk)  
+AMD EPYC 7452 32-Core Processor ( 64 vCPUs, 128 GB memory)  
+4 x NVIDIA RTX A5000 (not used in this compettion)  
 
 # SOFTWARE
-(python packages are detailed separately in `requirements.txt`):
-Python 3.11.11
+(python packages are detailed separately in `requirements.txt`):  
+Python 3.11.11  
 
 # DATA SETUP
-(assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed)
-below are the shell commands used in each step, as run from the top level directory
+(assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed)  
+below are the shell commands used in each step, as run from the top level directory  
 mkdir -p data  
 cd data  
 kaggle competitions download -c aeroclub-recsys-2025 -f train.parquet  
@@ -35,8 +35,8 @@ kaggle competitions download -c aeroclub-recsys-2025 -f test.parquet
 # DATA PROCESSING
 python python prepare_data.py
 
-#MODEL BUILD:
+# MODEL BUILD:
 python train.py
 
-#MAKE PREDICTIONS:
+# MAKE PREDICTIONS:
 python predict.py
