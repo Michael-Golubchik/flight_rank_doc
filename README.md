@@ -1,6 +1,7 @@
+# FlightRank 2025: Aeroclub RecSys Cup
 Hello!
 
-Below you can find a outline of how to reproduce my solution for the **aeroclub-recsys-2025 competition**.<br>
+Below you can find a outline of how to reproduce my solution for the **FlightRank 2025: Aeroclub RecSys Cup**.<br>
 If you run into any trouble with the setup/code or have any questions please contact me at mikhail.golubchik@gmail.com<br>
 
 # ARCHIVE CONTENTS
